@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "senai_lovePets_webApi", "senai_lovePets_webApi\senai_lovePets_webApi.csproj", "{EAA238D0-B19B-44B8-A5D5-4C7F05B45D7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAA238D0-B19B-44B8-A5D5-4C7F05B45D7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA238D0-B19B-44B8-A5D5-4C7F05B45D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA238D0-B19B-44B8-A5D5-4C7F05B45D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA238D0-B19B-44B8-A5D5-4C7F05B45D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E0735A5-1F1F-483A-8D6C-5230B016D563}
+	EndGlobalSection
+EndGlobal
