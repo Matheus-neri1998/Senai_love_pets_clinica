@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\36773915805\\Desktop\\Senai_love_pets_clinica\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj": {}
+    "C:\\Users\\MatheusNeri\\Documents\\Senai_love_pets_clinica\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\36773915805\\Desktop\\Senai_love_pets_clinica\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj": {
+    "C:\\Users\\MatheusNeri\\Documents\\Senai_love_pets_clinica\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\36773915805\\Desktop\\Senai_love_pets_clinica\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj",
+        "projectUniqueName": "C:\\Users\\MatheusNeri\\Documents\\Senai_love_pets_clinica\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj",
         "projectName": "senai_lovePets_webApi",
-        "projectPath": "C:\\Users\\36773915805\\Desktop\\Senai_love_pets_clinica\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj",
-        "packagesPath": "C:\\Users\\36773915805\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\36773915805\\Desktop\\Senai_love_pets_clinica\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\obj\\",
+        "projectPath": "C:\\Users\\MatheusNeri\\Documents\\Senai_love_pets_clinica\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj",
+        "packagesPath": "C:\\Users\\MatheusNeri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MatheusNeri\\Documents\\Senai_love_pets_clinica\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\36773915805\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MatheusNeri\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }
