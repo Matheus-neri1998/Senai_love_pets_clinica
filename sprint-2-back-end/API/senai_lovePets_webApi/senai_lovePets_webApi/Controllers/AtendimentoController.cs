@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai_lovePets_webApi.Domains;
 using senai_lovePets_webApi.Interfaces;
 using senai_lovePets_webApi.Repositories;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,11 +15,11 @@ namespace senai_lovePets_webApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class AtendimentosController : ControllerBase
+    public class AtendimentoController : ControllerBase
     {
         private IAtendimentoRepository _atendimentoRepository { get; set; }
 
-        public AtendimentosController()
+        public AtendimentoController()
         {
             _atendimentoRepository = new AtendimentoRepository();
         }
@@ -44,6 +46,7 @@ namespace senai_lovePets_webApi.Controllers
         /// </summary>
         /// <param name="idAtendimento">ID do atendimento que será buscado</param>
         /// <returns>Um atendimento encontrado e um status code 200 - Ok</returns>
+        
         [HttpGet("{idAtendimento}")]
         public IActionResult BuscarPorId(int idAtendimento)
         {
@@ -62,6 +65,8 @@ namespace senai_lovePets_webApi.Controllers
         /// </summary>
         /// <param name="novoAtendimento">Objeto com as novas informações</param>
         /// <returns>Um status code 201 - Created</returns>
+        
+       
         [HttpPost]
         public IActionResult Cadastrar(Atendimento novoAtendimento)
         {
@@ -96,7 +101,7 @@ namespace senai_lovePets_webApi.Controllers
             {
                 return BadRequest(erro);
             }
-        }
+        } // Fim de Atualizar
 
         /// <summary>
         /// Deleta um atendimento existente
@@ -116,13 +121,14 @@ namespace senai_lovePets_webApi.Controllers
             {
                 return BadRequest(erro);
             }
-        }
+        } // Fim de Deletar
 
         /// <summary>
         /// Altera o status de um atendimento
         /// </summary>
         /// <param name="atendimento">Objeto com o atendimento que será alterado e a nova situação</param>
         /// <returns>Um status code 204 - No Content</returns>
+        [Authorize(Roles = "1")]
         [HttpPatch]
         public IActionResult AlterarStatus(Atendimento atendimento)
         {
@@ -136,6 +142,24 @@ namespace senai_lovePets_webApi.Controllers
             {
                 return BadRequest(erro);
             }
-        }
+        } // Fim de AlterarStatus
+
+        [Authorize(Roles = "2, 3")]
+        [HttpGet("listarmeus")]
+
+        public IActionResult ListarMeus()
+        {
+            try
+            {
+                int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+
+                return Ok(_atendimentoRepository.ListarMeus(idUsuario));
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro);
+            }
+        } // Fim de ListarMeus
     }
 }

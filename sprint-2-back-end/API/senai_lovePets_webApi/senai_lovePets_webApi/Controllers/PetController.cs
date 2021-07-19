@@ -48,6 +48,7 @@ namespace senai_lovePets_webApi.Controllers
             }
         } // Fim de BuscarPorId
 
+
         [HttpPost]
         public IActionResult Cadastrar(Pet NovoPet)
         {
