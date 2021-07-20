@@ -1,0 +1,746 @@
+{
+	"info": {
+		"_postman_id": "4da424f4-33d0-4b20-876d-b22b89b49638",
+		"name": "lovePets.webApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Atendimento",
+			"item": [
+				{
+					"name": "Atendimento.ListarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/atendimento"
+					},
+					"response": []
+				},
+				{
+					"name": "Atendimento.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/atendimento/7"
+					},
+					"response": []
+				},
+				{
+					"name": "Atendimento.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPet\": 2,\r\n    \"idVeterinario\": 2,\r\n    \"descricao\": \"restam 10 dias de vida\",\r\n    \"dataAtendimento\": \"2021-07-15T17:30:00\",\r\n    \"idSituacao\": 2\r\n\r\n    \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/atendimento"
+					},
+					"response": []
+				},
+				{
+					"name": "Atendimento.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPet\": 2,\r\n    \"idVeterinario\": 2,\r\n    \"descricao\": \"restam 5 dias de vida\",\r\n    \"dataAtendimento\": \"2021-07-19T17:30:00\",\r\n    \"idSituacao\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/atendimento/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Atendimento.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/atendimento/9"
+					},
+					"response": []
+				},
+				{
+					"name": "Atendimento.AlterarStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAtendimento\" : 3,\r\n    \"idSituacao\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/atendimento"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"adm@adm.com\",\r\n    \"senha\" : \"adm123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clinica",
+			"item": [
+				{
+					"name": "Clinica.ListarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/clinica"
+					},
+					"response": []
+				},
+				{
+					"name": "Clinica.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/clinica/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Clinica.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyNjgwODQ5OSwiaXNzIjoibG92ZVBldHMud2ViQXBpIiwiYXVkIjoibG92ZVBldHMud2ViQXBpIn0.v6SnRoAcErWrRTeBm9a-mL-kNRvbGY__7CAqojsQLqg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"endereco\": \" Av. Rio Branco, 15120\",\r\n        \"razaoSocial\": \"lovePetstres\",\r\n        \"cnpj\": \"111111111111\"\r\n        \r\n    }\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/clinica"
+					},
+					"response": []
+				},
+				{
+					"name": "Clinica.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"endereco\": \"R. Clélia, 731,\",\r\n        \"razaoSocial\": \"lovePetsdois\",\r\n        \"cnpj\": \"7777777777777 \"\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/clinica/4"
+					},
+					"response": []
+				},
+				{
+					"name": "Clinica.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/clinica/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dono",
+			"item": [
+				{
+					"name": "Dono.ListarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/dono"
+					},
+					"response": []
+				},
+				{
+					"name": "Dono.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/dono/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Dono.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyNjgwODU5NiwiaXNzIjoibG92ZVBldHMud2ViQXBpIiwiYXVkIjoibG92ZVBldHMud2ViQXBpIn0.G0DxzH9WXkfT0b_UT2Mx18_eam1psl8wnHNAKWrc5Ic"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nomeDono\": \"Erick\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/dono"
+					},
+					"response": []
+				},
+				{
+					"name": "Dono.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n        \"nomeDono\": \"Mathias\"\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/dono/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Dono.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/dono/5"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pet",
+			"item": [
+				{
+					"name": "Pet.ListarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/pet"
+					},
+					"response": []
+				},
+				{
+					"name": "Pet.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/pet/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Pet.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \r\n        \"nomePet\": \"stith\",\r\n        \"idRaca\": 3,\r\n        \"idDono\": 3,\r\n        \"dataNascimento\": \"2016-05-22T00:00:00\"\r\n    \r\n    }   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/pet"
+					},
+					"response": []
+				},
+				{
+					"name": "Pet.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \r\n        \"nomePet\": \"lillow\",\r\n        \"idRaca\": 3,\r\n        \"idDono\": 3,\r\n        \"dataNascimento\": \"2016-01-28T00:00:00\"\r\n    \r\n    }  ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/pet/4"
+					},
+					"response": []
+				},
+				{
+					"name": "Pet.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/pet/8"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Raca",
+			"item": [
+				{
+					"name": "Raca.ListarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/raca"
+					},
+					"response": []
+				},
+				{
+					"name": "Raca.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/raca/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Raca.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \r\n        \"idTipoPet\": 2,\r\n        \"nomeRaca\": \"Persa\"\r\n    \r\n    }   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/raca"
+					},
+					"response": []
+				},
+				{
+					"name": "Raca.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \r\n        \"idTipoPet\": 2,\r\n        \"nomeRaca\": \"Ragdoll\"\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/raca/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Raca.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/raca/5"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Situacao",
+			"item": [
+				{
+					"name": "Situacao.ListarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/situacao"
+					},
+					"response": []
+				},
+				{
+					"name": "Situacao.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/situacao/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Situacao.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \r\n        \"nomeSituacao\": \"em processo de espera\"\r\n       \r\n    } ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/situacao"
+					},
+					"response": []
+				},
+				{
+					"name": "Situacao.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \r\n       \"nomeSituacao\": \"em processo de aguardo\"\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/situacao/4"
+					},
+					"response": []
+				},
+				{
+					"name": "Situacao.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/situacao/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TipoPet",
+			"item": [
+				{
+					"name": "TipoPet.ListarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/tipopet"
+					},
+					"response": []
+				},
+				{
+					"name": "TipoPet.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/tipopet/3"
+					},
+					"response": []
+				},
+				{
+					"name": "TipoPet.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \r\n        \"nomeTipoPet\": \"tartaruga\"\r\n    \r\n    }   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/tipopet"
+					},
+					"response": []
+				},
+				{
+					"name": "TipoPet.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \r\n         \"nomeTipoPet\": \"camundongo\"\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/tipopet/3"
+					},
+					"response": []
+				},
+				{
+					"name": "TipoPet.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/tipopet/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TipoUsuario",
+			"item": [
+				{
+					"name": "TipoUsuario.ListarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/tipousuario"
+					},
+					"response": []
+				},
+				{
+					"name": "TipoUsuario.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/tipousuario/4"
+					},
+					"response": []
+				},
+				{
+					"name": "TipoUsuario.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n       \r\n        \"nomeTipoUsuario\": \"acomponhante\"\r\n        \r\n    }   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/tipousuario"
+					},
+					"response": []
+				},
+				{
+					"name": "TipoUsuario.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \r\n        \"nomeTipoUsuario\": \"assistente\"\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/tipousuario/4"
+					},
+					"response": []
+				},
+				{
+					"name": "TipoUsuario.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/tipousuario/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Usuario.ListarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/usuario"
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/usuario/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \r\n        \"idTipoUsuario\": 2,\r\n        \"email\": \"Dakota@email.com\",\r\n        \"senha\": \"Dakota123\"\r\n    \r\n    }   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/usuario"
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \r\n        \"email\": \"lillow123@email.com\",\r\n        \"senha\": \"lillow1234\"\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/usuario/7"
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/usuario/8"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Veterinario",
+			"item": [
+				{
+					"name": "Veterinario.ListarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/raca"
+					},
+					"response": []
+				},
+				{
+					"name": "Veterinario.BuscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/raca/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Veterinario.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \r\n        \"idTipoPet\": 2,\r\n        \"nomeRaca\": \"Persa\"\r\n    \r\n    }   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/raca"
+					},
+					"response": []
+				},
+				{
+					"name": "Veterinario.Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \r\n        \"idTipoPet\": 2,\r\n        \"nomeRaca\": \"Ragdoll\"\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/raca/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Veterinario.Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/raca/5"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

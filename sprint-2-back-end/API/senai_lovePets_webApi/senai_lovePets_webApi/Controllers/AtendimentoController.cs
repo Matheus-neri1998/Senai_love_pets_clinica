@@ -128,7 +128,7 @@ namespace senai_lovePets_webApi.Controllers
         /// </summary>
         /// <param name="atendimento">Objeto com o atendimento que será alterado e a nova situação</param>
         /// <returns>Um status code 204 - No Content</returns>
-        [Authorize(Roles = "1")]
+        
         [HttpPatch]
         public IActionResult AlterarStatus(Atendimento atendimento)
         {

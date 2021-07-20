@@ -13,6 +13,7 @@ GO
 INSERT INTO dono(nomeDono)
 VALUES			('Paulo'),
                 ('Odirlei');
+				
 GO
 
 INSERT INTO raca(idTipoPet, nomeRaca)

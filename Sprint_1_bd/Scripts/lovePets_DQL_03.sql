@@ -53,9 +53,3 @@ ON clinica.idClinica = veterinario.idClinica;
 SELECT * FROM atendimento
 WHERE idAtendimento = 2
 
-DELETE FROM atendimento
-WHERE idAtendimento = 1
-
-UPDATE atendimento
-SET idSituacao = 2
-WHERE idAtendimento = 2
