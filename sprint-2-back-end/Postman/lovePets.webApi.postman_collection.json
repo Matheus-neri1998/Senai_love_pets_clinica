@@ -99,7 +99,9 @@
 					"request": {
 						"auth": {
 							"type": "bearer",
-							"bearer": {}
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyNjgwODU5NiwiaXNzIjoibG92ZVBldHMud2ViQXBpIiwiYXVkIjoibG92ZVBldHMud2ViQXBpIn0.G0DxzH9WXkfT0b_UT2Mx18_eam1psl8wnHNAKWrc5Ic"
+							}
 						},
 						"method": "POST",
 						"header": [],
@@ -123,9 +125,22 @@
 			"item": [
 				{
 					"name": "Clinica.ListarTodos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyNjg4NTk2NSwiaXNzIjoibG92ZVBldHMud2ViQXBpIiwiYXVkIjoibG92ZVBldHMud2ViQXBpIn0.yOGeX2Cj1XA3EeOD3FdlEyzf79fZYREpnj_DgFp40gM"
+							}
+						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": "http://localhost:5000/api/clinica"
 					},
 					"response": []
@@ -145,14 +160,14 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyNjgwODQ5OSwiaXNzIjoibG92ZVBldHMud2ViQXBpIiwiYXVkIjoibG92ZVBldHMud2ViQXBpIn0.v6SnRoAcErWrRTeBm9a-mL-kNRvbGY__7CAqojsQLqg"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyNjg4NjMwNCwiaXNzIjoibG92ZVBldHMud2ViQXBpIiwiYXVkIjoibG92ZVBldHMud2ViQXBpIn0.1iwiWihYARrDo1wt7MlGj6xD74BRL_DdVMg83rbfjGQ"
 							}
 						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \r\n        \"endereco\": \" Av. Rio Branco, 15120\",\r\n        \"razaoSocial\": \"lovePetstres\",\r\n        \"cnpj\": \"111111111111\"\r\n        \r\n    }\r\n    ",
+							"raw": "{\r\n        \r\n        \"endereco\": \" Av. São João, 2098\",\r\n        \"razaoSocial\": \"lovePetssetima\",\r\n        \"cnpj\": \"33333333\"\r\n        \r\n    }\r\n    ",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -271,9 +286,27 @@
 			"item": [
 				{
 					"name": "Pet.ListarTodos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyNjg4NDIxMSwiaXNzIjoibG92ZVBldHMud2ViQXBpIiwiYXVkIjoibG92ZVBldHMud2ViQXBpIn0.j4sdRGzxKzYPc6ZiX64NrNBYRrrMhi20QDg7JMtz-5Y"
+							}
+						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": "http://localhost:5000/api/pet"
 					},
 					"response": []
@@ -290,6 +323,12 @@
 				{
 					"name": "Pet.Cadastrar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyNjg4NDIxMSwiaXNzIjoibG92ZVBldHMud2ViQXBpIiwiYXVkIjoibG92ZVBldHMud2ViQXBpIn0.j4sdRGzxKzYPc6ZiX64NrNBYRrrMhi20QDg7JMtz-5Y"
+							}
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -358,11 +397,17 @@
 				{
 					"name": "Raca.Cadastrar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyNjg4NDc3NywiaXNzIjoibG92ZVBldHMud2ViQXBpIiwiYXVkIjoibG92ZVBldHMud2ViQXBpIn0.VqX-pQscAfld4zzyNfCr2DVsBi9NbBTUwi6uyS4CQCI"
+							}
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \r\n        \"idTipoPet\": 2,\r\n        \"nomeRaca\": \"Persa\"\r\n    \r\n    }   ",
+							"raw": "    {\r\n        \r\n        \"idTipoPet\": 1,\r\n        \"nomeRaca\": \"PitBull\"\r\n    \r\n    }   ",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -494,11 +539,17 @@
 				{
 					"name": "TipoPet.Cadastrar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyNjg4NDcxNCwiaXNzIjoibG92ZVBldHMud2ViQXBpIiwiYXVkIjoibG92ZVBldHMud2ViQXBpIn0.7PdBktEmfhsU8gP5MLqN1-_bwz7OI2PgeDJsx2uHTqU"
+							}
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \r\n        \"nomeTipoPet\": \"tartaruga\"\r\n    \r\n    }   ",
+							"raw": "    {\r\n        \r\n        \"nomeTipoPet\": \"Camundongo\"\r\n    \r\n    }   ",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -562,11 +613,17 @@
 				{
 					"name": "TipoUsuario.Cadastrar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBhZG0uY29tIiwianRpIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjEiLCJyb2xlIjoiMSIsImV4cCI6MTYyNjg4NDQzOSwiaXNzIjoibG92ZVBldHMud2ViQXBpIiwiYXVkIjoibG92ZVBldHMud2ViQXBpIn0.6RjnJZcVven1-kdtQxUBd1dZ41uyf-QyEkjyEMImRko"
+							}
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n       \r\n        \"nomeTipoUsuario\": \"acomponhante\"\r\n        \r\n    }   ",
+							"raw": "    {\r\n       \r\n        \"nomeTipoUsuario\": \"Assistente\"\r\n        \r\n    }   ",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -682,7 +739,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:5000/api/raca"
+						"url": "http://localhost:5000/api/veterinario"
 					},
 					"response": []
 				},
@@ -691,7 +748,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:5000/api/raca/2"
+						"url": "http://localhost:5000/api/veterinario/2"
 					},
 					"response": []
 				},
@@ -702,14 +759,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \r\n        \"idTipoPet\": 2,\r\n        \"nomeRaca\": \"Persa\"\r\n    \r\n    }   ",
+							"raw": "    {\r\n        \"idClinica\": 1,\r\n        \"crmv\": \"890765\",\r\n        \"nomeVeterinario\": \"Celso\",\r\n        \"idUsuario\": 4\r\n    \r\n    }   ",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "http://localhost:5000/api/raca"
+						"url": "http://localhost:5000/api/veterinario"
 					},
 					"response": []
 				},
@@ -720,14 +777,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \r\n        \"idTipoPet\": 2,\r\n        \"nomeRaca\": \"Ragdoll\"\r\n        \r\n    }",
+							"raw": "    {\r\n        \r\n         \"crmv\": \"890765\",\r\n        \"nomeVeterinario\": \"Alan\"\r\n        \r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "http://localhost:5000/api/raca/5"
+						"url": "http://localhost:5000/api/veterinario/4"
 					},
 					"response": []
 				},
@@ -736,7 +793,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": "http://localhost:5000/api/raca/5"
+						"url": "http://localhost:5000/api/veterinario/3"
 					},
 					"response": []
 				}

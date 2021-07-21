@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai_lovePets_webApi.Domains;
 using senai_lovePets_webApi.Interfaces;
@@ -49,6 +50,7 @@ namespace senai_lovePets_webApi.Controllers
         } // Fim de BuscarPorId
 
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Cadastrar(Pet NovoPet)
         {

@@ -27,6 +27,7 @@ namespace senai_lovePets_webApi.Controllers
             _login = new UsuarioRepository();
         }
 
+        
         [HttpPost]
 
         public IActionResult Logar(LoginViewModel login)
