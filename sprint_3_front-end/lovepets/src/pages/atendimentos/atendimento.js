@@ -19,7 +19,7 @@ export default class atendimentos extends Component{
           if (resposta.status !== 200) {
             throw Error();
           }
-    
+
           return resposta.json();
         })
     
@@ -31,11 +31,11 @@ export default class atendimentos extends Component{
       componentDidMount(){
         this.BuscarAtendimentos();
       };
-    
+
       render(){
         return(
           <div>
-            <h1>Atendimentos</h1>
+            <h1>Gerenciar Atendimentos</h1>
     
             <section>
               <h2>Lista dos Atendimentos</h2>
