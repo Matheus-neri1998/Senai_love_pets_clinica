@@ -25,7 +25,7 @@ const PermissaoAdm = ({ component : Component }) => (
       render = {props => 
         UsuarioAutenticado() && parseJwt().role === '1' ?
         <Component {...props}/> :
-        <Redirect to="login" />
+        <Redirect to="/login" />
       }
     />
 )
@@ -33,9 +33,9 @@ const PermissaoAdm = ({ component : Component }) => (
 const PermissaoVetPet = ({ component : Component}) => (
         <Route
         render = {props => 
-          UsuarioAutenticado() && parseJwt().role === '2' || parseJwt().role === '3' ?
+          UsuarioAutenticado() && (parseJwt().role === '2' || parseJwt().role === '3') ?
           <Component {...props}/> :
-          <Redirect to="login" />
+          <Redirect to="/login" />
         }
       />
 
@@ -48,7 +48,7 @@ const routing = (
           <PermissaoAdm path="/atendimento" component={atendimentos} />
           <PermissaoVetPet path="/meusatendimentos" component={meusatendimentos} />
           <Route path="/login" component={login} />
-          <Route path="/notFound" component={notFound} />
+          <Route exact path="/notFound" component={notFound} />
           <Redirect to="/notFound" />
         </Switch>
       </Router>

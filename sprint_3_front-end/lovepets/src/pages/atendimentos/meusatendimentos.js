@@ -59,20 +59,20 @@ export default class meusatendimentos extends Component{
                         <tbody>
     
                             {
-                            this.state.listaAtendimentos.map( (atendimento) => {
+                            this.state.ListaAtendimentos.map( (atendimento) => {
                                 return(
 
-                                <tr key={atendimento.idAtendimento}>
-                                    <td>{atendimento.idAtendimento}</td>
-                                    <td>{atendimento.idPetNavigation.nomePet}</td>
-                                    <td>{atendimento.idVeterinarioNavigation.nomeVeterinario}</td>
-                                    <td>{atendimento.descricao}</td>
+                                <tr key={atendimento.IdAtendimento}>
+                                    <td>{atendimento.IdAtendimento}</td>
+                                    <td>{atendimento.IdPetNavigation.nomePet}</td>
+                                    <td>{atendimento.IdVeterinarioNavigation.NomeVeterinario}</td>
+                                    <td>{atendimento.Descricao}</td>
                                     <td>{Intl.DateTimeFormat("pt-BR", {
                                     year: 'numeric', month: 'numeric', day: 'numeric',
                                     hour: 'numeric', minute: 'numeric',
                                     hour12: false
-                                    }).format(new Date(atendimento.dataAtendimento))}</td>
-                                    <td>{atendimento.idSituacaoNavigation.nomeSituacao}</td>
+                                    }).format(new Date(atendimento.DataAtendimento))}</td>
+                                    <td>{atendimento.IdSituacaoNavigation.NomeSituacao}</td>
                                 </tr>
 
                                 )
